@@ -2,7 +2,7 @@
 
 A simple command-line tool to flatten JSON objects using [JSON Pointer](https://tools.ietf.org/html/rfc6901)-style keys.
 
-Implementation based on [this answer](https://stackoverflow.com/a/42156958) on stack overflow.
+Essentially a tiny wrapper around single call to [`json-pointer.flatten`](https://www.npmjs.com/package/json-pointer).
 
 ## dependencies
 
@@ -39,25 +39,20 @@ $ cat <<EOF > data.json
 EOF
 
 $ json-flatten data.json
-{
-  "/name": "John",
-  "/cars/0/brand": "Ford",
-  "/cars/0/type": "Taunus",
-  "/cars/1/brand": "Nissan",
-  "/cars/1/type": "Micra"
-}
-
+{ '/name': 'John',
+  '/cars/0/brand': 'Ford',
+  '/cars/0/type': 'Taunus',
+  '/cars/1/brand': 'Nissan',
+  '/cars/1/type': 'Micra' }
 ```
 
 With input from stdin:
 
 ```
 $ cat data.json | json-flatten
-{
-  "/name": "John",
-  "/cars/0/brand": "Ford",
-  "/cars/0/type": "Taunus",
-  "/cars/1/brand": "Nissan",
-  "/cars/1/type": "Micra"
-}
+{ '/name': 'John',
+  '/cars/0/brand': 'Ford',
+  '/cars/0/type': 'Taunus',
+  '/cars/1/brand': 'Nissan',
+  '/cars/1/type': 'Micra' }
 ```
