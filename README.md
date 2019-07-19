@@ -2,6 +2,8 @@
 
 A simple command-line tool to flatten JSON objects using [JSON Pointer](https://tools.ietf.org/html/rfc6901)-style keys.
 
+Implementation based on [this answer](https://stackoverflow.com/a/42156958) on stack overflow.
+
 ## dependencies
 
 * nodejs
