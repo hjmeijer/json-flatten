@@ -1,0 +1,9 @@
+{
+  "name": "json-flatten",
+  "version": "0.0.1",
+  "description": "A simple command-line tool to flatten JSON objects",
+  "author": "Henk-Jan Meijer",
+  "bin": {
+    "json-flatten": "index.js"
+  }
+}
